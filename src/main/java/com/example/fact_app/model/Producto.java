@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Producto {
+    private Integer id;
     private String codigo;
     private String nombre;
     private Categoria categoria;
