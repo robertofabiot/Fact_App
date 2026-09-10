@@ -6,55 +6,113 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f4f7f9;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fact_app.controller.MenuPrincipalController">
+<BorderPane fx:id="mainContainer" prefHeight="720.0" prefWidth="920.0" style="-fx-background-color: #f4f7f9;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fact_app.controller.MenuPrincipalController">
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
-        <menus>
-          <Menu mnemonicParsing="false" text="Archivo">
-            <items>
-              <MenuItem fx:id="menuItemSalir" mnemonicParsing="false" onAction="#onSalirClick" text="Salir">
+      <VBox spacing="0.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                    <MenuItem fx:id="menuItemSalir" mnemonicParsing="false" onAction="#onSalirClick" text="Salir">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/cerrar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Catálogos">
+                  <items>
+                    <MenuItem fx:id="menuItemProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" text="Productos">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/producto.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuItemCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" text="Cargos">
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/cargo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem fx:id="menuItemAcercaDe" mnemonicParsing="false" onAction="#onAcercaDeClick" text="Acerca de" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar style="-fx-background-color: #f1f5f9; -fx-border-color: #cbd5e1; -fx-border-width: 0 0 1 0; -fx-padding: 6 16 6 16;">
+               <items>
+                  <Button fx:id="btnNavHome" mnemonicParsing="false" onAction="#onNavHomeClick" prefHeight="38.0" prefWidth="48.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                      <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/cerrar.png" />
+                              <Image url="@../icons/volver.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </MenuItem>
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Catálogos">
-            <items>
-              <MenuItem fx:id="menuItemProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" text="Productos">
+                     <tooltip>
+                        <Tooltip text="Inicio / Menú Principal" />
+                     </tooltip>
+                  </Button>
+                  <Separator orientation="VERTICAL" />
+                  <Button fx:id="btnNavProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" prefHeight="38.0" prefWidth="48.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                      <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/producto.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </MenuItem>
-                  <MenuItem fx:id="menuItemCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" text="Cargos">
+                     <tooltip>
+                        <Tooltip text="Catálogo de Productos" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnNavCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" prefHeight="38.0" prefWidth="48.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                      <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/cargo.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </MenuItem>
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Ayuda">
-            <items>
-              <MenuItem fx:id="menuItemAcercaDe" mnemonicParsing="false" onAction="#onAcercaDeClick" text="Acerca de" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+                     <tooltip>
+                        <Tooltip text="Gestión de Cargos" />
+                     </tooltip>
+                  </Button>
+                  <Separator orientation="VERTICAL" />
+                  <Button fx:id="btnNavSalir" mnemonicParsing="false" onAction="#onSalirClick" prefHeight="38.0" prefWidth="48.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/cerrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Salir del Sistema" />
+                     </tooltip>
+                  </Button>
+               </items>
+            </ToolBar>
+         </children>
+      </VBox>
    </top>
    <center>
-      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="homeView" alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="95.0" fitWidth="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
