@@ -148,6 +148,11 @@ public class CargoController {
         tblCargos.getSelectionModel().clearSelection();
     }
 
+    @FXML
+    public void onVolverMenuClick(ActionEvent event) {
+        com.example.fact_app.util.SceneManager.switchScene("/com/example/fact_app/fxml/menu-principal.fxml", "Sistema de Facturación - Menú Principal");
+    }
+
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
         Alert alerta = new Alert(tipo);
         alerta.setTitle(titulo);
