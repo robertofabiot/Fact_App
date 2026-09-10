@@ -33,6 +33,12 @@ public class CargoController {
     private Button btnDelete;
 
     @FXML
+    private Button btnLimpiar;
+
+    @FXML
+    private Button btnVolver;
+
+    @FXML
     private TableView<Cargo> tblCargos;
 
     @FXML
@@ -138,6 +144,11 @@ public class CargoController {
         }
 
         listaCargos.remove(seleccionado);
+        limpiarCampos();
+    }
+
+    @FXML
+    public void limpiarOnClick(ActionEvent event) {
         limpiarCampos();
     }
 
