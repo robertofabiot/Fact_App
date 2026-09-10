@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="560.0" prefWidth="760.0" spacing="16.0" style="-fx-background-color: #f4f7f9;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fact_app.controller.CargoController">
+    <children>
+        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Cargos" textFill="#1f2937">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Separator />
+        <GridPane hgap="18.0" maxWidth="620.0" vgap="12.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="170.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="300.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label text="Id" textFill="#111827">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtId" promptText="Ejemplo: 123" GridPane.columnIndex="1" />
+                <Label text="Nombre" textFill="#111827" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtNombre" promptText="Ejemplo: Manager" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Descripción" textFill="#111827" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtDescripcion" promptText="Ejemplo: Maneja todo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnAdd" defaultButton="true" mnemonicParsing="false" onAction="#addOnClick" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #0f766e; -fx-text-fill: white; -fx-font-weight: bold;" text="Agregar" />
+            <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#editOnClick" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #0f766e; -fx-text-fill: white; -fx-font-weight: bold;" text="Editar" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteOnClick" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: #0f766e; -fx-text-fill: white; -fx-font-weight: bold;" text="Borrar" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+        <Separator />
+        <Label alignment="CENTER_LEFT" maxWidth="620.0" text="Cargos registrados" textFill="#1f2937">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblCargos" prefHeight="200.0" prefWidth="620.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="120.0" text="Id" />
+                <TableColumn fx:id="colNombre" prefWidth="120.0" text="Nombre" />
+                <TableColumn fx:id="colDescripcion" prefWidth="90.0" text="Descripcion" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="42.0" right="42.0" top="30.0" />
+    </padding>
+</VBox>
