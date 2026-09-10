@@ -230,7 +230,7 @@ public class ProductoController {
 
     @FXML
     public void onVolverMenuClick(ActionEvent event) {
-        SceneManager.switchScene("/com/example/fact_app/fxml/menu-principal.fxml", "Sistema de Facturación - Menú Principal");
+        SceneManager.showHome();
     }
 
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {

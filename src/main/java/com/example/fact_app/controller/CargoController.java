@@ -161,7 +161,7 @@ public class CargoController {
 
     @FXML
     public void onVolverMenuClick(ActionEvent event) {
-        com.example.fact_app.util.SceneManager.switchScene("/com/example/fact_app/fxml/menu-principal.fxml", "Sistema de Facturación - Menú Principal");
+        com.example.fact_app.util.SceneManager.showHome();
     }
 
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
