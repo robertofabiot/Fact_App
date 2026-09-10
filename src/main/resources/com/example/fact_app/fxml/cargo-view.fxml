@@ -49,7 +49,7 @@
         </GridPane>
       <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="15.0">
          <children>
-            <Button fx:id="btnAdd" defaultButton="true" mnemonicParsing="false" onAction="#addOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: #0f766e; -fx-cursor: hand; -fx-background-radius: 6;">
+            <Button fx:id="btnAdd" defaultButton="true" mnemonicParsing="false" onAction="#addOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -61,7 +61,7 @@
                   <Tooltip text="Agregar cargo" />
                </tooltip>
             </Button>
-            <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#editOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: #0f766e; -fx-cursor: hand; -fx-background-radius: 6;">
+            <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#editOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -73,7 +73,7 @@
                   <Tooltip text="Editar cargo seleccionado" />
                </tooltip>
             </Button>
-            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: #b91c1c; -fx-cursor: hand; -fx-background-radius: 6;">
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -85,7 +85,7 @@
                   <Tooltip text="Eliminar cargo seleccionado" />
                </tooltip>
             </Button>
-            <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#limpiarOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: #6b7280; -fx-cursor: hand; -fx-background-radius: 6;">
+            <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#limpiarOnClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -97,7 +97,7 @@
                   <Tooltip text="Limpiar formulario" />
                </tooltip>
             </Button>
-            <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#onVolverMenuClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: #4b5563; -fx-cursor: hand; -fx-background-radius: 6;">
+            <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#onVolverMenuClick" prefHeight="40.0" prefWidth="55.0" style="-fx-background-color: transparent; -fx-border-color: #94a3b8; -fx-border-width: 1.5; -fx-border-radius: 6; -fx-cursor: hand;">
                <graphic>
                   <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
