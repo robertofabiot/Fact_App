@@ -8,7 +8,28 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+
 public class MenuPrincipalController {
+
+    @FXML
+    private BorderPane mainContainer;
+
+    @FXML
+    private VBox homeView;
+
+    @FXML
+    private Button btnNavHome;
+
+    @FXML
+    private Button btnNavProductos;
+
+    @FXML
+    private Button btnNavCargos;
+
+    @FXML
+    private Button btnNavSalir;
 
     @FXML
     private Button btnProductos;
@@ -32,13 +53,24 @@ public class MenuPrincipalController {
     private MenuItem menuItemAcercaDe;
 
     @FXML
+    public void initialize() {
+        SceneManager.setRootLayout(mainContainer);
+        SceneManager.setHomeView(homeView);
+    }
+
+    @FXML
+    public void onNavHomeClick(ActionEvent event) {
+        SceneManager.showHome();
+    }
+
+    @FXML
     public void onAbrirProductosClick(ActionEvent event) {
-        SceneManager.switchScene("/com/example/fact_app/fxml/producto-view.fxml", "Módulo de Productos");
+        SceneManager.loadCenterView("/com/example/fact_app/fxml/producto-view.fxml", "Sistema de Facturación - Catálogo de Productos");
     }
 
     @FXML
     public void onAbrirCargosClick(ActionEvent event) {
-        SceneManager.switchScene("/com/example/fact_app/fxml/cargo-view.fxml", "Módulo de Cargos");
+        SceneManager.loadCenterView("/com/example/fact_app/fxml/cargo-view.fxml", "Sistema de Facturación - Gestión de Cargos");
     }
 
     @FXML
