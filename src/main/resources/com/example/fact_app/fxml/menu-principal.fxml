@@ -25,8 +25,24 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Catálogos">
             <items>
-              <MenuItem fx:id="menuItemProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" text="Productos" />
-                  <MenuItem fx:id="menuItemCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" text="Cargos" />
+              <MenuItem fx:id="menuItemProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" text="Productos">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/producto.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem fx:id="menuItemCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" text="Cargos">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/cargo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
@@ -58,16 +74,41 @@
             <Separator maxWidth="540.0" />
             <HBox alignment="CENTER" spacing="25.0">
                <children>
-                  <Button fx:id="btnProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #0f766e; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-cursor: hand; -fx-background-radius: 8;" text="Productos" />
-                  <Button fx:id="btnCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #1e293b; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-cursor: hand; -fx-background-radius: 8;" text="Cargos" />
-                  <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#onSalirClick" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #b91c1c; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px; -fx-cursor: hand; -fx-background-radius: 8;" text="Salir">
+                  <Button fx:id="btnProductos" mnemonicParsing="false" onAction="#onAbrirProductosClick" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: #0f766e; -fx-cursor: hand; -fx-background-radius: 8;">
                      <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/producto.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Catálogo de Productos" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnCargos" mnemonicParsing="false" onAction="#onAbrirCargosClick" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: #1e293b; -fx-cursor: hand; -fx-background-radius: 8;">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/cargo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Gestión de Cargos" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#onSalirClick" prefHeight="70.0" prefWidth="90.0" style="-fx-background-color: #b91c1c; -fx-cursor: hand; -fx-background-radius: 8;">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../icons/cerrar.png" />
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Salir del Sistema" />
+                     </tooltip>
                   </Button>
                </children>
                <padding>
